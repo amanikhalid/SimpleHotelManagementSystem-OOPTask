@@ -16,22 +16,17 @@ namespace SimpleHotelManagementSystem_OOPTask
         //Auto-property: Name
         public string Name
         {
-            get
-            { return Name; }
+            get 
+            { 
+                return name;
+            }
 
             set
             {
-                // Validation for Name property
-                if (string.IsNullOrWhiteSpace(value))
-                {
-                    Console.WriteLine("Name cannot be empty or whitespace.");
-
-                }
+                if (!string.IsNullOrWhiteSpace(value) && value.Length >= 3)
+                    name = value;
                 else
-                {
-                    Name = value;
-                }
-
+                    Console.WriteLine("Name must be at least 3 characters and not empty.");
             }
         }
 
@@ -39,25 +34,19 @@ namespace SimpleHotelManagementSystem_OOPTask
 
 
 
-//Auto-property: NationalID
-public string NationalID
-        { 
-            get { return NationalID; }
+        //Auto-property: NationalID
+        public string NationalID
+        {
+            get { return nationalID; }
             set
             {
-                // Validation for NationalID property
-                if (string.IsNullOrWhiteSpace(value) || value.Length != 6)
-                {
-                    Console.WriteLine("National ID must be exactly 6 characters long and cannot be empty or whitespace.");
-                }
+                if (!string.IsNullOrWhiteSpace(value) && value.Length == 6)
+                    nationalID = value;
                 else
-                {
-                    NationalID = value;
-                }
+                    Console.WriteLine("National ID must be exactly 6 characters.");
             }
-
-
         }
+
         public string Password
         {
             set { password = value; }
