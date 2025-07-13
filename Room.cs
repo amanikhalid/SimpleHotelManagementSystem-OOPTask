@@ -19,6 +19,9 @@ namespace SimpleHotelManagementSystem_OOPTask
             
         }
 
+        // Field: isBooked (bool)
+        private bool isBooked=true; 
+
 
 
 
