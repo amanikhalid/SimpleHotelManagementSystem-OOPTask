@@ -35,6 +35,13 @@ namespace SimpleHotelManagementSystem_OOPTask
             isBooked = true;
         }
 
+        // Method: sets isBooked to false
+        public void Free()
+        {
+            isBooked = false;
+        }
+
+
 
 
 
