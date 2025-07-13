@@ -29,6 +29,15 @@ namespace SimpleHotelManagementSystem_OOPTask
             NationalID = nationalID;
         }
 
+        // Display room status before booking
+        // Console.WriteLine("Room" + room1.RoomNumber + " booked status: " + room1.isBooked);
+
+        // Book the Room
+        // room1.Book(); 
+
+        // Display room status after booking
+        // Console.WriteLine("Room" + room1.RoomNumber + " booked status: " + room1.isBooked);
+
 
 
     }

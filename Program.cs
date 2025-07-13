@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+           // Create a room with room number (1) 
+           Room room1 = new Room(1);
+
+
         }
     }
 }
