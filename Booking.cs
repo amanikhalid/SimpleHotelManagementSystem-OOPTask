@@ -13,6 +13,8 @@ namespace SimpleHotelManagementSystem_OOPTask
         private Guest bookingGuest;
         private DateTime bookingDate;
 
+        public DateTime BookingTime;
+
         // Constructor that takes a Room and a Guest 
         public Booking(Room room, Guest guest)
         {
@@ -39,10 +41,13 @@ namespace SimpleHotelManagementSystem_OOPTask
             {
                 if (bookedRoom.IsBooked)
                 {
+                    bookedRoom.Book();
+                    BookingTime = DateTime.Now; // Set the booking time
                     Console.WriteLine($"Booking confirmed for {bookingGuest.Name} in room {bookedRoom.RoomNumber}.");
                 }
                 else // If not booked
                 {
+                    
                     Console.WriteLine("Booking could not be confirmed as the room is not booked.");
                 }
             }
