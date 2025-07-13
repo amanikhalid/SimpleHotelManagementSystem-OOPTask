@@ -29,6 +29,11 @@ namespace SimpleHotelManagementSystem_OOPTask
            
         }
 
+        // Method: sets isBooked to true
+        public void Book()
+        {
+            isBooked = true;
+        }
 
 
 
