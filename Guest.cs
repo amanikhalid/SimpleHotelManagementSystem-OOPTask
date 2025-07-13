@@ -3,17 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SimpleHotelManagementSystem_OOPTask
 {
     class Guest
     {
         //Auto-property: Name
-        public string Name { get; set; }
+        public string Name
+        {
+            get
+            { return Name; }
+
+            set
+            {
+                // Validation for Name property
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    Console.WriteLine("Name cannot be empty or whitespace.");
+
+                }
+                else
+                {
+                    Name = value;
+                }
+
+            }
+        }
 
 
-        //Auto-property: NationalID
-        public string NationalID { get; set; }
+
+
+
+//Auto-property: NationalID
+public string NationalID { get; set; }
 
         // Constructor overloads to Guest class 
         public Guest()
@@ -29,14 +52,7 @@ namespace SimpleHotelManagementSystem_OOPTask
             NationalID = nationalID;
         }
 
-        // Display room status before booking
-        // Console.WriteLine("Room" + room1.RoomNumber + " booked status: " + room1.isBooked);
-
-        // Book the Room
-        // room1.Book(); 
-
-        // Display room status after booking
-        // Console.WriteLine("Room" + room1.RoomNumber + " booked status: " + room1.isBooked);
+   
 
 
 
