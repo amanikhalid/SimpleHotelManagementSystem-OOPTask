@@ -17,6 +17,11 @@
             // Display room status before booking
             Console.WriteLine("Room " + room1.RoomNumber + " booked status: " + room1.IsBooked);
 
+            // Book the Room
+            room1.Book();
+
+
+
 
         }
     }
