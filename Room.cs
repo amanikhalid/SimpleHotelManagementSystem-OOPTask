@@ -48,6 +48,13 @@ namespace SimpleHotelManagementSystem_OOPTask
             isBooked = false; // default value 
         }
 
+        // Constructor that takes a Room
+        public Room(int roomNumber)
+        {
+            this.roomNumber = roomNumber;
+            isBooked = false; // default value 
+        }
+
 
 
 
