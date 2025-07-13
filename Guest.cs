@@ -11,5 +11,11 @@ namespace SimpleHotelManagementSystem_OOPTask
         //Auto-property: Name
         public string Name { get; set; }
 
+
+        //Auto-property: NationalID
+        public string NationalID { get; set; }
+
     }
+
+
 }
