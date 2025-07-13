@@ -12,7 +12,10 @@
             {
                 Name = "Amani",
                 NationalID = "221199"
-            }; 
+            };
+
+            // Display room status before booking
+            Console.WriteLine("Room " + room1.RoomNumber + " booked status: " + room1.IsBooked);
 
 
         }
