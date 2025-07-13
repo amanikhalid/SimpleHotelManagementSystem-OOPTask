@@ -20,7 +20,14 @@ namespace SimpleHotelManagementSystem_OOPTask
         }
 
         // Field: isBooked (bool)
-        private bool isBooked=true; 
+        private bool isBooked=true;
+
+        // Property: IsBooked
+        public bool IsBooked
+        {
+            get { return isBooked; }
+           
+        }
 
 
 
