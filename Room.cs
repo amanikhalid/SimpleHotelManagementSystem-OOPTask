@@ -12,6 +12,15 @@ namespace SimpleHotelManagementSystem_OOPTask
         // Field: roomNumber
         private int roomNumber;
 
+        // Property: RoomNumber
+        public int RoomNumber
+        {
+            get { return roomNumber; }
+            
+        }
+
+
+
 
 
     }
