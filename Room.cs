@@ -9,5 +9,10 @@ namespace SimpleHotelManagementSystem_OOPTask
     class Room
     {
 
+        // Field: roomNumber
+        private int roomNumber;
+
+
+
     }
 }
