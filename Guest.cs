@@ -15,6 +15,14 @@ namespace SimpleHotelManagementSystem_OOPTask
         //Auto-property: NationalID
         public string NationalID { get; set; }
 
+        // Constructor overloads to Guest class 
+        public Guest()
+        {
+            Name = "Amani";
+            NationalID = "221199";
+        }
+
+
     }
 
 
