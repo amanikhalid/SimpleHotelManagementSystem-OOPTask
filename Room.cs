@@ -16,6 +16,17 @@ namespace SimpleHotelManagementSystem_OOPTask
         public int RoomNumber
         {
             get { return roomNumber; }
+            set
+            {
+                if (roomNumber <= 0)
+                {
+                    Console.WriteLine("Room number must be greater than 0.");
+                }
+                else
+                {
+                    roomNumber = value;
+                }
+            }
             
         }
 
