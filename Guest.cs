@@ -22,6 +22,14 @@ namespace SimpleHotelManagementSystem_OOPTask
             NationalID = "221199";
         }
 
+        // Parameterized constructor
+        public Guest(string name, string nationalID)
+        {
+            Name = name;
+            NationalID = nationalID;
+        }
+
+
 
     }
 
