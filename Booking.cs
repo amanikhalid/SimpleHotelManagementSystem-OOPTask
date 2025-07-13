@@ -11,6 +11,7 @@ namespace SimpleHotelManagementSystem_OOPTask
         // Booking Fields
         private Room bookedRoom;
         private Guest bookingGuest;
+        private DateTime bookingDate;
 
         // Constructor that takes a Room and a Guest 
         public Booking(Room room, Guest guest)
