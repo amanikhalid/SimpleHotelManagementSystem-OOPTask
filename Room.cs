@@ -8,5 +8,6 @@ namespace SimpleHotelManagementSystem_OOPTask
 {
     class Room
     {
+
     }
 }
