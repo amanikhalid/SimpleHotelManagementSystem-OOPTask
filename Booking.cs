@@ -34,24 +34,24 @@ namespace SimpleHotelManagementSystem_OOPTask
                 bookedRoom.Book(); // Book the room
                 Console.WriteLine($"Room {bookedRoom.RoomNumber} has been booked for {bookingGuest.Name}.");
             }
-
-            // Method ConfirmBooking()
-            // Checks if the room is booked and confirms the booking
-            void ConfirmBooking()
+        }
+        // Method ConfirmBooking()
+        // Checks if the room is booked and confirms the booking
+        public void ConfirmBooking()
+        {
+            if (bookedRoom.IsBooked)
             {
-                if (bookedRoom.IsBooked)
-                {
-                    bookedRoom.Book();
-                    BookingTime = DateTime.Now; // Set the booking time
-                    Console.WriteLine($"Booking confirmed for {bookingGuest.Name} in room {bookedRoom.RoomNumber}.");
-                }
-                else // If not booked
-                {
-                    
-                    Console.WriteLine("Booking could not be confirmed as the room is not booked.");
-                }
+                bookedRoom.Book();
+                BookingTime = DateTime.Now; // Set the booking time
+                Console.WriteLine($"Booking confirmed for {bookingGuest.Name} in room {bookedRoom.RoomNumber}.");
+            }
+            else // If not booked
+            {
+
+                Console.WriteLine("Booking could not be confirmed as the room is not booked.");
             }
         }
 
     }
+
 }
