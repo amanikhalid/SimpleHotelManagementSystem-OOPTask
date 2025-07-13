@@ -9,6 +9,10 @@ namespace SimpleHotelManagementSystem_OOPTask
 {
     class Guest
     {
+        private string name;
+        private string nationalID;
+        private string password;
+
         //Auto-property: Name
         public string Name
         {
@@ -53,6 +57,10 @@ public string NationalID
             }
 
 
+        }
+        public string Password
+        {
+            set { password = value; }
         }
 
         // Constructor overloads to Guest class 
