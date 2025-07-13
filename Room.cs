@@ -8,9 +8,9 @@ namespace SimpleHotelManagementSystem_OOPTask
 {
     class Room
     {
-
-        // Field: roomNumber
         private int roomNumber;
+        private bool isBooked;
+        private static int roomCount = 0;
 
         // Property: RoomNumber
         public int RoomNumber
@@ -18,27 +18,14 @@ namespace SimpleHotelManagementSystem_OOPTask
             get { return roomNumber; }
             set
             {
-                if (roomNumber <= 0)
-                {
-                    Console.WriteLine("Room number must be greater than 0.");
-                }
-                else
-                {
+                if (value >= 100)
                     roomNumber = value;
-                }
+                else
+                    Console.WriteLine("Room number must be 100 or above.");
             }
-            
         }
+        public bool IsBooked => isBooked;
 
-        // Field: isBooked (bool)
-        private bool isBooked=true;
-
-        // Property: IsBooked
-        public bool IsBooked
-        {
-            get { return isBooked; }
-           
-        }
 
         // Method: sets isBooked to true
         public void Book()
@@ -57,17 +44,18 @@ namespace SimpleHotelManagementSystem_OOPTask
         {
             roomNumber = 0;
             isBooked = false; // default value 
+            roomCount++;
         }
 
         // Constructor that takes a Room
         public Room(int roomNumber)
         {
-            this.roomNumber = roomNumber;
-            isBooked = false; // default value 
+            RoomNumber = roomNumber;
+            isBooked = false;
+            roomCount++;
         }
 
-
-
+        public static int GetRoomCount() => roomCount;
 
 
 
