@@ -12,5 +12,26 @@ namespace SimpleHotelManagementSystem_OOPTask
         private Room bookedRoom;
         private Guest bookingGuest;
 
+        // Constructor that takes a Room and a Guest 
+        public Booking(Room room, Guest guest)
+        {
+            if (room == null || guest == null)
+            {
+                throw new ArgumentNullException("Room and Guest cannot be null.");
+            }
+            bookedRoom = room;
+            bookingGuest = guest;
+            // Check if the room is already booked
+            if (bookedRoom.IsBooked)
+            {
+                Console.WriteLine("The room is already booked.");
+            }
+            else
+            {
+                bookedRoom.Book(); // Book the room
+                Console.WriteLine($"Room {bookedRoom.RoomNumber} has been booked for {bookingGuest.Name}.");
+            }
+        }
+
     }
 }
