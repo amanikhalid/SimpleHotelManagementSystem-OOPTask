@@ -13,9 +13,18 @@ namespace SimpleHotelManagementSystem_OOPTask
         {
             if (string.IsNullOrEmpty(guestName))
             {
-                throw new ArgumentException("Guest name cannot be null or empty.");
+                Console.WriteLine("Guest name cannot be null or empty.");
             }
             Console.WriteLine($"Welcome to our hotel, {guestName}! We hope you have a pleasant stay.");
+        }
+        // A static method IsRoomAvailable(Room room) that returns true/false
+        public static bool IsRoomAvailable(Room room)
+        {
+            if (room == null)
+            {
+                Console.WriteLine("Room cannot be null.");
+            }
+            return !room.IsBooked; // Returns true if the room is not booked
         }
     }
 }
